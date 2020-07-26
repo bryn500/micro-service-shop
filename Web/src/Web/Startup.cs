@@ -28,19 +28,16 @@ namespace Web
                 options.UseSqlServer(
                     Configuration.GetConnectionString("DefaultConnection")));
 
-            services.AddDefaultIdentity<IdentityUser>()
-                .AddEntityFrameworkStores<ApplicationDbContext>();
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
 
-            //services.AddIdentity<IdentityUser, IdentityRole>()
-            //    .AddEntityFrameworkStores<ApplicationDbContext>()
-            //    .AddDefaultTokenProviders();
-
-            //services.AddMvc()
-            //.AddRazorPagesOptions(options =>
-            //{
-            //    options.Conventions.AuthorizeAreaFolder("Identity", "/Pages/Account/Manage");
-            //    options.Conventions.AuthorizeAreaPage("Identity", "/Pages/Account/Logout");
-            //});
+            services.AddMvc()
+                .AddRazorPagesOptions(options =>
+                {
+                    options.Conventions.AuthorizeAreaFolder("Identity", "/Pages/Account/Manage");
+                    options.Conventions.AuthorizeAreaPage("Identity", "/Pages/Account/Logout");
+                });
 
             services.ConfigureApplicationCookie(options =>
             {
