@@ -10,6 +10,7 @@ namespace Web.Service
     {
         public Task SendEmailAsync(string email, string subject, string message)
         {
+            //throw new NotImplementedException();
             return Task.CompletedTask;
         }
     }
