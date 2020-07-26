@@ -17,7 +17,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Baskets", "Baskets\src\Bask
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{088BD505-A71B-4BBA-89DB-24496A7D0FD4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Web.Data", "Web\src\Web.Data\Web.Data.csproj", "{45F45E77-92B8-42A5-860F-5774A1B8669D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Identity.Data", "Web\src\Web.Data\Identity.Data.csproj", "{45F45E77-92B8-42A5-860F-5774A1B8669D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
